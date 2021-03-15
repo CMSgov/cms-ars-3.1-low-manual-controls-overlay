@@ -1,5 +1,5 @@
-# cms-ars-3.1-manual-controls-baseline
-InSpec profile baseline to **automate manual controls** of [CMS ARS 3.1](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Info-Security-Library-Items/ARS-31-Publication.html), validating any/all of its 489 security controls. 
+# cms-ars-3.1-high-manual-controls-overlay
+InSpec profile overlay to **automate manual controls** of [CMS ARS 3.1](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Info-Security-Library-Items/ARS-31-Publication.html), for systems categorized as High. 
 
 ## Getting Started  
 
@@ -36,7 +36,7 @@ __After installing InSpec, run this command to support addressing/automating man
 ![image](https://user-images.githubusercontent.com/34140975/111183325-294dab80-8586-11eb-908a-912db61894c7.png)
 
 
-#### Prepare your attestations file content. (See [attestation sample template](https://github.com/ejaronne/cms-ars-3.1-manual-controls-baseline/blob/update/attestation-template-cms-ars-3.1-manual-controls-baseline.json))
+#### Prepare your attestations file content. (See [attestation sample template](https://github.com/ejaronne/cms-ars-3.1-high-manual-controls-overlay/blob/update/attestation-template-cms-ars-3.1-high-manual-controls-overlay.json))
 
 By default, controls in this profile require manual review, whereby someone interviews/examines the requirement and confirms (attests as to) whether or not the control requirements have been satisfied. These attestations must be configured in a json ".json" file:
 ```
@@ -92,7 +92,7 @@ _for example_
 
 ```
 # How to run
-cinc-auditor exec https://github.com/ejaronne/cms-ars-3.1-manual-controls-baseline/archive/main.tar.gz --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
+cinc-auditor exec https://github.com/ejaronne/cms-ars-3.1-high-manual-controls-overlay/archive/main.tar.gz --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
 ```
 
 ### Different Run Options
@@ -110,18 +110,18 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 ```
 mkdir profiles
 cd profiles
-git clone https://github.com/ejaronne/cms-ars-3.1-manual-controls-baseline.git
-cinc-auditor archive cms-ars-3.1-manual-controls-baseline
+git clone https://github.com/ejaronne/cms-ars-3.1-high-manual-controls-overlay.git
+cinc-auditor archive cms-ars-3.1-high-manual-controls-overlay
 cinc-auditor exec <name of generated archive> --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
 ```
 
 For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
-cd cms-ars-3.1-manual-controls-baseline
+cd cms-ars-3.1-high-manual-controls-overlay
 git pull
 cd ..
-cinc-auditor archive cms-ars-3.1-manual-controls-baseline --overwrite
+cinc-auditor archive cms-ars-3.1-high-manual-controls-overlay --overwrite
 cinc-auditor exec <name of generated archive> --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
 ```
 
