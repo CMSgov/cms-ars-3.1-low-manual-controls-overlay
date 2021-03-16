@@ -1,11 +1,11 @@
-name: cms-ars-3.1-moderate-manual-controls-overlay
-title: cms-ars-3.1-moderate-manual-controls-overlay
+name: cms-ars-3.1-low-manual-controls-overlay
+title: cms-ars-3.1-low-manual-controls-overlay
 maintainer: CMS SAF Team
 copyright: .
 copyright_email: .
-summary: "CMS ARS 3.1 Moderate System Categorization Manual Controls Overlay InSpec Profile"
+summary: "CMS ARS 3.1 Low System Categorization Manual Controls Overlay InSpec Profile"
 license: Apache-2.0
-Description: "CMS ARS 3.1 Moderate System Categorization Manual Controls Overlay InSpec Profile"
+Description: "CMS ARS 3.1 Low System Categorization Manual Controls Overlay InSpec Profile"
 version: 1.0.1
 inspec_version: ">= 4.0"
 
