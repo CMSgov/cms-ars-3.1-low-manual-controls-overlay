@@ -1,6 +1,6 @@
-# cms-ars-3.1-moderate-manual-controls-overlay
+# cms-ars-3.1-low-manual-controls-overlay
 InSpec profile overlay to **automate manual controls** of [CMS ARS 3.1](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Info-Security-Library-Items/ARS-31-Publication.html),  
-**for systems categorized as Moderate** _(includes Moderate and Non-Mandatory controls)_
+**for systems categorized as Low** _(includes Low and Non-Mandatory controls)_
 
 ## Getting Started  
 
@@ -36,7 +36,7 @@ __After installing InSpec, run this command to support addressing/automating man
 ### Addressing manual controls
 ![image](https://user-images.githubusercontent.com/34140975/111320501-6a54c700-863d-11eb-8a4c-cfcac34b3863.png)
 
-#### Prepare your attestations file content. (See [attestation sample template](https://github.com/ejaronne/cms-ars-3.1-moderate-manual-controls-overlay/blob/update/attestation-template-cms-ars-3.1-manual-controls-baseline.json))
+#### Prepare your attestations file content. (See [attestation sample template](https://github.com/ejaronne/cms-ars-3.1-low-manual-controls-overlay/blob/update/attestation-template-cms-ars-3.1-manual-controls-baseline.json))
 
 By default, controls in this profile require manual review, whereby someone interviews/examines the requirement and confirms (attests as to) whether or not the control requirements have been satisfied. These attestations must be configured in a json ".json" file:
 ```
@@ -92,7 +92,7 @@ _for example_
 
 ```
 # How to run
-cinc-auditor exec https://github.com/ejaronne/cms-ars-3.1-moderate-manual-controls-overlay/archive/main.tar.gz --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
+cinc-auditor exec https://github.com/ejaronne/cms-ars-3.1-low-manual-controls-overlay/archive/main.tar.gz --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
 ```
 
 ### Different Run Options
@@ -110,18 +110,18 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 ```
 mkdir profiles
 cd profiles
-git clone https://github.com/ejaronne/cms-ars-3.1-moderate-manual-controls-overlay.git
-cinc-auditor archive cms-ars-3.1-moderate-manual-controls-overlay
+git clone https://github.com/ejaronne/cms-ars-3.1-low-manual-controls-overlay.git
+cinc-auditor archive cms-ars-3.1-low-manual-controls-overlay
 cinc-auditor exec <name of generated archive> --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
 ```
 
 For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
-cd cms-ars-3.1-moderate-manual-controls-overlay
+cd cms-ars-3.1-low-manual-controls-overlay
 git pull
 cd ..
-cinc-auditor archive cms-ars-3.1-moderate-manual-controls-overlay --overwrite
+cinc-auditor archive cms-ars-3.1-low-manual-controls-overlay --overwrite
 cinc-auditor exec <name of generated archive> --reporter hdf:<path_to_your_output_file/name_of_your_output_file.json> --config <path_to_your_attestation_file/name_of_your_attestation_file.json>
 ```
 
@@ -136,7 +136,7 @@ The JSON InSpec results file may also be loaded into a __[full heimdall server](
 * Rony Xavier - [rx294](https://github.com/rx294)
 
 ## Contributing and Getting Help
-To report a bug or feature request, please open an [issue](https://github.com/ejaronne/cms-ars-3.1-moderate-manual-controls-overlay/issues/new).
+To report a bug or feature request, please open an [issue](https://github.com/ejaronne/cms-ars-3.1-low-manual-controls-overlay/issues/new).
 
 ### NOTICE
 
