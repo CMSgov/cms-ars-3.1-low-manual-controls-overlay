@@ -33,8 +33,14 @@ __After installing InSpec, run this command to support addressing/automating man
 "cinc-auditor plugin install inspec-reporter-json-hdf" 
 ```
 
-### Addressing manual controls
+### Addressing manual controls  
+**Viewing the HDF json in __[Heimdall](https://heimdall-lite.cms.gov/)__:**  
+
 ![image](https://user-images.githubusercontent.com/34140975/111337668-a7748580-864c-11eb-81ed-788fe1bf5209.png)
+
+**Exported from Heimdall to CAAT file:**  
+
+![image](https://user-images.githubusercontent.com/34140975/111353333-941ce680-865b-11eb-9d5e-d68acc9b0564.png)
 
 #### Prepare your attestations file content. (See [attestation sample template](https://github.com/ejaronne/cms-ars-3.1-low-manual-controls-overlay/blob/update/attestation-template-cms-ars-3.1-manual-controls-baseline.json))
 
